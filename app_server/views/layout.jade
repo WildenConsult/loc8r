@@ -1,11 +1,35 @@
 doctype html
 html
-  head
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title= title
-    link(rel='stylesheet', href='/bootstrap/css/amelia.bootstrap.min.css')
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
-    script(src='/javascripts/jquery-1.12.4.min.js')
-    script(src='/bootstrap/js/bootstrap.min.js')
+	head
+		meta(name='viewport', content='width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+		meta(name='viewport', content='width=device-width')
+		title= title
+		link(rel='stylesheet', href='/bootstrap/css/superhero.bootstrap.min.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		.navbar-default.navbar-fixed-top
+			.navbar-inner
+				.container-fluid
+					.navbar-header
+						a.navbar-brand(href='/') Loc8r
+						button.navbar-toggle.navbar-btn(type='button', data-toggle="collapse", data-target='#navbar-main')
+							span.icon-bar
+							span.icon-bar
+							span.icon-bar
+						#navbar-main.navbar-collapse.collapse
+							ul.nav.navbar-nav
+								li
+									a(href='/about/') About
+								li
+									a(href='/location') Locations
+								li
+									a(href='/') Home    
+		.container.content
+			block content
+
+			footer
+				.row
+					.col-xs-12
+						small &copy; Dan Wilden 2016
+		script(src='/javascripts/jquery-1.12.4.min.js')
+		script(src='/bootstrap/js/bootstrap.min.js')
